@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 import TopicDetails from "./pages/TopicDetails";
 import ExternalResources from "./pages/ExternalResources";
-import Favorites from "./pages/Favorites";
+import Favorites from "./pages/Faves";
 import AddTopic from "./pages/AddTopic";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
