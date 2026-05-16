@@ -11,7 +11,6 @@ import ExternalResources from "./pages/ExternalResources";
 import Favorites from "./pages/Faves";
 import AddTopic from "./pages/AddTopic";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -27,7 +26,6 @@ function App() {
           <Route path="/topics/:id" element={<TopicDetails />} />
           <Route path="/external-resources" element={<ExternalResources />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />
 
           <Route
