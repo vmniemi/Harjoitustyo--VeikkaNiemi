@@ -19,7 +19,7 @@ function App() {
     <div className="app">
       <Navbar />
 
-      <main className="main-content">
+      <main id="main-content" className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/learn" element={<Learn />} />

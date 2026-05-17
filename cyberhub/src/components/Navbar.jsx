@@ -10,7 +10,9 @@ function Navbar() {
     await logoutUser();
     navigate("/");
   }
-
+<a className="skip-link" href="#main-content">
+  Skip to main content
+</a>
   return (
     <header className="site-header">
       <nav className="navbar" aria-label="Main navigation">

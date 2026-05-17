@@ -1,9 +1,10 @@
 1. Improve the Learn page 
-    - Added more stuff
+-DONE
 2. Add category and difficulty filters
-    - Done
+ - Done
 3. Add topic detail pages with better content
-    - Add more content
+- Add more content
+ - DONE
 4. Add GitHub API external resource search
 - Done
 5. Add Firebase Authentication
@@ -15,3 +16,5 @@
 8. Add Add Topic form
 -DONE
 9. Write accessibility/responsive report
+
+-Responsive done

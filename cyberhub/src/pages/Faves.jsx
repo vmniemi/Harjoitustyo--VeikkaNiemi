@@ -33,22 +33,19 @@ function Favorites() {
     loadFavorites();
   }, [currentUser]);
 
+  function handleFavoriteChange(resourceId, isNowFavorite) {
+    if (!isNowFavorite) {
+      setFavoriteResources((currentResources) =>
+        currentResources.filter((resource) => resource.id !== resourceId)
+      );
+    }
+  }
+
   if (status === "loading") {
     return (
       <section className="page">
         <h1>Favorites</h1>
         <p>Loading favorites...</p>
-      </section>
-    );
-  }
-
-  if (status === "error") {
-    return (
-      <section className="page">
-        <h1>Favorites</h1>
-        <div className="error-box" role="alert">
-          <p>Could not load favorites. Try again later.</p>
-        </div>
       </section>
     );
   }
@@ -71,6 +68,7 @@ function Favorites() {
               key={resource.id}
               resource={resource}
               isFavorite={true}
+              onFavoriteChange={handleFavoriteChange}
             />
           ))}
         </div>

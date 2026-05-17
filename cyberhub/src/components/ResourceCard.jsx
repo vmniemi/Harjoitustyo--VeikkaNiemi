@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { addFavorite, removeFavorite } from "../firebase/firestoreService";
 
-function ResourceCard({ resource, isFavorite = false }) {
+function ResourceCard({ resource, isFavorite = false, onFavoriteChange }) {
   const { currentUser } = useAuth();
+
   const [saved, setSaved] = useState(isFavorite);
   const [isSaving, setIsSaving] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState("");
+
+  useEffect(() => {
+    setSaved(isFavorite);
+  }, [isFavorite]);
 
   function showTemporaryFeedback(message) {
     setFeedbackMessage(message);
@@ -30,10 +35,20 @@ function ResourceCard({ resource, isFavorite = false }) {
       if (saved) {
         await removeFavorite(currentUser.uid, resource.id);
         setSaved(false);
+
+        if (onFavoriteChange) {
+          onFavoriteChange(resource.id, false);
+        }
+
         showTemporaryFeedback("Removed from favorites.");
       } else {
         await addFavorite(currentUser.uid, resource.id, currentUser.email);
         setSaved(true);
+
+        if (onFavoriteChange) {
+          onFavoriteChange(resource.id, true);
+        }
+
         showTemporaryFeedback("Added to favorites.");
       }
     } catch (error) {
