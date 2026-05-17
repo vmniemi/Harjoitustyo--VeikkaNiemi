@@ -21,3 +21,7 @@ Responsiivisuutta testattiin selaimen kehittäjätyökaluilla 375 pikselin, 768 
 ![kuva pöytäkoneesta](poyta.PNG)
 
 
+## Toimivuus eri selaimilla
+
+
+## Sivujen latautumisaika
