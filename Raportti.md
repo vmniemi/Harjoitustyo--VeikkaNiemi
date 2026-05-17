@@ -24,4 +24,14 @@ Responsiivisuutta testattiin selaimen kehittäjätyökaluilla 375 pikselin, 768 
 ## Toimivuus eri selaimilla
 
 
+Google Chrome 148: Ei ongelmia. Sivusto latautuu oikein, navigointi toimii ja Firebase/GitHub API -ominaisuudet toimivat odotetulla tavalla.
+
+Mozilla Firefox 150.0.3: Toiminnallisuus on kunnossa. Kaikki pääelementit latautuvat oikein, mukaan lukien suodattimet, aihesivut, kirjautuminen, suosikit ja ulkoisten resurssien haku.
+
+Microsoft Edge 148.0.3967.70: Sivusto latautuu nopeasti ja ongelmitta. Asettelu, navigointi, todennus, suosikit ja GitHub API -haku toimivat oikein.
+
+Safari 26.5: Pieniä visuaalisia eroja saattaa esiintyä Chromium-pohjaisiin selaimiin verrattuna, mutta asettelu ja ydintoiminnot pysyvät ennallaan.
+
+
 ## Sivujen latautumisaika
+
