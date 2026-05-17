@@ -31,6 +31,12 @@ jobs:
         run: npm install
         working-directory: ./cyberhub
 
+      - name: Check Firebase env availability
+        run: |
+          echo "PROJECT_ID exists: ${{ secrets.VITE_FIREBASE_PROJECT_ID != '' }}"
+          echo "API_KEY exists: ${{ secrets.VITE_FIREBASE_API_KEY != '' }}"
+          echo "AUTH_DOMAIN exists: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN != '' }}"
+
       - name: Build project
         run: npm run build
         working-directory: ./cyberhub
