@@ -35,3 +35,15 @@ Safari 26.5: Pieniä visuaalisia eroja saattaa esiintyä Chromium-pohjaisiin sel
 
 ## Sivujen latautumisaika
 
+
+![kuva](test1.PNG)
+
+
+![kuva](test2.PNG)
+
+
+![kuva](test3.PNG)
+
+
+Latausaikaa testattiin selaimen kehittäjätyökaluilla sivuston GitHub Pages -versiossa. Verkko-välilehti osoitti, että pääasiallinen HTML-dokumentti, JavaScript-paketti ja CSS-tiedosto latautuivat onnistuneesti tilassa 200. Pääasiallinen JavaScript-paketti oli suurin tiedosto, kun taas CSS-tiedosto oli pieni. Myös GitHub API -pyyntö Ulkoiset resurssit -sivulla ajettiin onnistuneesti tilassa 200 ja kesti noin 710 ms, mikä on kohtuullinen aika kolmannen osapuolen REST API -pyynnölle. Suorituskyky-välilehti osoitti LCP:ksi 0,06 sekuntia ja CLS:ksi 0, mikä tarkoittaa, että pääsisältö ilmestyi nopeasti ja asettelu pysyi vakaana. Kaiken kaikkiaan verkkosivuston latausaika oli kohtuullinen testauksen aikana. Puuttuva favicon palautti 404-virheen, mutta se ei vaikuttanut verkkosivuston toimintaan.
+
