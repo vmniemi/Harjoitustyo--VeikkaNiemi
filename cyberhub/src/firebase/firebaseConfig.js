@@ -3,13 +3,25 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  VITE_FIREBASE_API_KEY: "AIzaSyAFuCOuh21C1sKSLGExxdpKm-ZP8yRgijY",
-  VITE_FIREBASE_AUTH_DOMAIN: "hartyo-4ef40.firebaseapp.com",
-  VITE_FIREBASE_PROJECT_ID: "hartyo-4ef40",
-  VITE_FIREBASE_STORAGE_BUCKET: "hartyo-4ef40.appspot.com",
-  VITE_FIREBASE_MESSAGING_SENDER_ID: "499688783540",
-  VITE_FIREBASE_APP_ID: "1:499688783540:web:45b7607e9693d62815e1e1"
+
+  apiKey: "AIzaSyAFuCOuh21C1sKSLGExxdpKm-ZP8yRgijY",
+
+  authDomain: "hartyo-4ef40.firebaseapp.com",
+
+  databaseURL: "https://hartyo-4ef40-default-rtdb.europe-west1.firebasedatabase.app",
+
+  projectId: "hartyo-4ef40",
+
+  storageBucket: "hartyo-4ef40.firebasestorage.app",
+
+  messagingSenderId: "499688783540",
+
+  appId: "1:499688783540:web:45b7607e9693d62815e1e1",
+
+  measurementId: "G-KMG3FBQQ0B"
+
 };
+
 console.log("Firebase project:", import.meta.env.VITE_FIREBASE_PROJECT_ID);
 console.log(
   "Firebase API key exists:",
